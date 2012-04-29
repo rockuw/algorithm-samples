@@ -31,13 +31,13 @@ void quick_sort(int a[], int begin, int end){
     if(begin >= end) return;
 
     i = partition(a, begin, end);
-    quick_sort(a, begin, i - 1);
+    quick_sort(a, begin, i);
     quick_sort(a, i + 1, end);
 }
 
 int main(){
     int i;
-    int arr[] = {3, 5, 7, 100, 1};
+    int arr[] = {3, 1, 7, 100, 5};
 
     quick_sort(arr, 0, 5);
 
