@@ -11,7 +11,7 @@ int *compute_pi(const char *pattern){
     k = -1;
     m = strlen(pattern);
     /* loop invariants:
-     * Pk ] Pq
+     * Pk ] Pq-1
      * P0 = -1
      */
     for(q = 1; q < m; q ++){
@@ -34,7 +34,7 @@ int kmp_search(const char *text, const char *pattern){
     pi = compute_pi(pattern);
     q = -1;
     /* loop invariants:
-     * Pq ] Ti
+     * Pq ] Ti-1
      */
     for(i = 0; i < n; i ++){
         while(q >= 0 && pattern[q+1] != text[i])
