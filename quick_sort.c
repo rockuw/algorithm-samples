@@ -15,8 +15,8 @@ int partition(int a[], int begin, int end){
     pivot = a[end - 1];
     // loop invariant: 
     // begin ~ i < pivot
-    // i+1 ~ j > pivot
-    for(i = begin - 1, j = begin; j < end; j ++){
+    // i+1 ~ j-1 > pivot
+    for(i = begin - 1, j = begin; j < end-1; j ++){
         if(a[j] < pivot){
             i ++;
             swap(&a[i], &a[j]);
